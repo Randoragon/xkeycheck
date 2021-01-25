@@ -5,7 +5,7 @@ OBJS=xkeycheck.o
 OUT=xkeycheck
 DESTDIR=
 PREFIX=/usr/local
-MANPREFIX=/usr/share/man
+MANPREFIX=$(PREFIX)/share/man
 
 all: main
 
