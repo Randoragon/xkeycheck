@@ -4,7 +4,7 @@ LDFLAGS=-lX11
 OBJS=xkeycheck.o
 OUT=xkeycheck
 DESTDIR=
-PREFIX=/usr/local/bin
+PREFIX=/usr/local
 
 all: main
 
@@ -23,4 +23,6 @@ debug: clean $(OBJS)
 
 install: CFLAGS += -O3
 install: clean all
-	cp -- $(OUT) $(DESTDIR)$(PREFIX)/
+	mkdir -p $(DESTDIR)$(PREFIX)/bin
+	cp -- $(OUT) $(DESTDIR)$(PREFIX)/bin
+	chmod 755 $(DESTDIR)$(PREFIX)/bin/$(OUT)
