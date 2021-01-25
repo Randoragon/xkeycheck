@@ -1,0 +1,84 @@
+.Dd 2021-01-25
+.Dt XKEYCHECK 1
+.Sh NAME
+.Nm xkeycheck
+.Nd small X utility for checking key states
+.Sh SYNOPSIS
+.Nm
+.Op Fl -help
+.Op Ar KEY
+.Sh DESCRIPTION
+.Nm
+is a tiny program which checks if some key is being held
+down or not. It is concerned only with physical keys, it does not
+distinguish between things such as upper or lower-case letters,
+symbols etc. It will return 0 if the key in question is down, and
+1 otherwise.
+.Sh OPTIONS
+.Bl -tag -width Ds
+.It Fl h, -help
+Print quick help message and exit.
+.El
+.Sh LIST OF AVAILABLE KEYS
+escape
+.br
+F1-F12
+.br
+printscreen
+.br
+scrolllock
+.br
+pause
+.br
+`
+.br
+0-9
+.br
+-  +
+.br
+backspace
+.br
+return/enter
+.br
+a-z
+.br
+space
+.br
+[  ]  ;  ' 
+.br
+lshift  rshift
+.br
+lctrl  rctrl
+.br
+lalt  ralt
+.br
+lsuper/lwin  rsuper/rwin
+.br
+menu
+.br
+tab
+.br
+capslock
+.br
+insert  delete
+.br
+home  end
+.br
+pageup  pagedown
+.br
+numlock
+.br
+num0-num9
+.br
+num+  num-  num*  num/  num.
+.br
+up  left  down  right
+.El
+.Sh EXAMPLES
+xkeycheck up && echo "up arrow is pressed"
+.Sh AUTHOR
+Randoragon <randoragongamedev@gmail.com>
+.Sh LICENSE
+Copyright (c) 2021 Randoragon. MIT License.
+.Sh SEE ALSO
+Project page: https://github.com/randoragon/xkeycheck

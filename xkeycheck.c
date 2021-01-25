@@ -233,14 +233,6 @@ void help()
 {
     printf("xkeycheck \n\
 \n\
-SYNOPSIS \n\
-        xkeycheck KEY \n\
-\n\
-DESCRIPTION \n\
-        Check if KEY is currently being pressed. \n\
-        Only checks physical keys, does not distinguish \n\
-        between lowercase/uppercase, special characters etc. \n\
-\n\
 LIST OF AVAILABLE KEYS \n\
         escape \n\
         F1-F12 \n\
@@ -272,15 +264,6 @@ LIST OF AVAILABLE KEYS \n\
 \n\
 EXAMPLE \n\
         xkeycheck left && echo \"left arrow key is down\" \n\
-\n\
-AUTHOR \n\
-        Written by Randoragon <randoragongamedev@gmail.com> \n\
-\n\
-LICENSE \n\
-        Copyright (C) 2021 Randoragon. MIT License. \n\
-\n\
-SEE ALSO \n\
-        Project page <https://github.com/randoragon/xkeycheck> \n\
 \n\
 ");
 }
