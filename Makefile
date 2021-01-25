@@ -29,6 +29,7 @@ install: clean all
 	@cp -- $(OUT) $(DESTDIR)$(PREFIX)/bin
 	@chmod 755 $(DESTDIR)$(PREFIX)/bin/$(OUT)
 	@echo installing man page...
+	@mkdir -p $(DESTDIR)$(MANPREFIX)/man1
 	@cp xkeycheck.1 $(DESTDIR)$(MANPREFIX)/man1/xkeycheck.1
 	@chmod 644 $(DESTDIR)$(MANPREFIX)/man1/xkeycheck.1
 
