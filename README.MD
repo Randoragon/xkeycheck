@@ -9,6 +9,8 @@ I wrote it because I was missing a simple, quick way of obtaining keyboard infor
 
 ## Installation
 
+Arch Linux users can install the `xkeycheck-git` AUR package.
+
 You only need Xlib installed, which comes by default on most Unix installations.
 
 Then, run the following (if necessary, as root):
