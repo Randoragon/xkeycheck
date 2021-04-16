@@ -1,84 +1,71 @@
-.Dd 2021-01-25
-.Dt XKEYCHECK 1
-.Sh NAME
-.Nm xkeycheck
-.Nd small X utility for checking key states
-.Sh SYNOPSIS
-.Nm
-.Op Fl -help
-.Op Ar KEY
-.Sh DESCRIPTION
-.Nm
-is a tiny program which checks if some key is being held
-down or not. It is concerned only with physical keys, it does not
-distinguish between things such as upper or lower-case letters,
-symbols etc. It will return 0 if the key in question is down, and
-1 otherwise.
-.Sh OPTIONS
-.Bl -tag -width Ds
-.It Fl h, -help
-Print quick help message and exit.
-.El
-.Sh LIST OF AVAILABLE KEYS
-escape
+.de BL
+.sp -1
+.IP \(bu 2
+\\$*
+..
+.TH XKEYCHECK 1 2021-04-16 "xkeycheck-VERSION"
+.SH NAME
+xkeycheck - a small X utility for checking key states
+.SH SYNOPSIS
+.B xkeycheck
+.RI [ OPTION ]
+.I KEY
+.SH DESCRIPTION
+.B xkeycheck
+is a tiny program which checks if some key
+is being held down or not. It is concerned
+only with physical keys, it does not
+distinguish between things such as upper or
+lower-case letters, symbols etc.
+.SH OPTIONS
+.TP
+.RB \-h ", " \-\-help
+Print a quick help message and exit.
+.SH EXIT STATUS
+.IP 0
+key is down
+.sp -1
+.IP 1
+key is up
+.SH AVAILABLE KEYS
+.BL escape
+.BL F1-F12
+.BL printscreen
+.BL pause
+.BL `
+.BL 0-9
+.BL - +
+.BL backspace
+.BL return/enter
+.BL a-z
+.BL space
+.BL [ ] ; ' \e , . /
+.BL lshift rshift
+.BL lctrl rctrl
+.BL lalt ralt
+.BL lsuper/lwin rsuper/rwin
+.BL menu
+.BL tab
+.BL capslock
+.BL insert delete
+.BL home end
+.BL pageup pagedown
+.BL numlock
+.BL num0-num9
+.BL num+ num- num* num/ num.
+.BL up left down right
+.SH EXAMPLES
+.EX
+$ xkeycheck up && echo "up arrow is pressed"
+.EE
+.SH AUTHORS
+.B xkeycheck
+was written by
+.MT "randoragongamedev@gmail.com"
+Randoragon
+.ME
 .br
-F1-F12
-.br
-printscreen
-.br
-scrolllock
-.br
-pause
-.br
-`
-.br
-0-9
-.br
--  +
-.br
-backspace
-.br
-return/enter
-.br
-a-z
-.br
-space
-.br
-[  ]  ;  ' 
-.br
-lshift  rshift
-.br
-lctrl  rctrl
-.br
-lalt  ralt
-.br
-lsuper/lwin  rsuper/rwin
-.br
-menu
-.br
-tab
-.br
-capslock
-.br
-insert  delete
-.br
-home  end
-.br
-pageup  pagedown
-.br
-numlock
-.br
-num0-num9
-.br
-num+  num-  num*  num/  num.
-.br
-up  left  down  right
-.El
-.Sh EXAMPLES
-xkeycheck up && echo "up arrow is pressed"
-.Sh AUTHOR
-Randoragon <randoragongamedev@gmail.com>
-.Sh LICENSE
-Copyright (c) 2021 Randoragon. MIT License.
-.Sh SEE ALSO
-Project page: https://github.com/randoragon/xkeycheck
+Browse the source code on
+.UR "https://github.com/randoragon/xkeycheck"
+GitHub
+.UE
