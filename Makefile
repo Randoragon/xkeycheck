@@ -7,6 +7,8 @@ DESTDIR=
 PREFIX=/usr/local
 MANPREFIX=$(PREFIX)/share/man
 
+VERSION=1.0
+
 all: main
 
 main: $(OBJS)
@@ -30,6 +32,9 @@ install: clean all
 	@chmod 755 $(DESTDIR)$(PREFIX)/bin/$(OUT)
 	@echo installing man page to $(DESTDIR)$(MANPREFIX)/man1...
 	@mkdir -p $(DESTDIR)$(MANPREFIX)/man1
-	@cp xkeycheck.1 $(DESTDIR)$(MANPREFIX)/man1/xkeycheck.1
+	@sed "s/VERSION/$(VERSION)/g" < xkeycheck.1 > $(DESTDIR)$(MANPREFIX)/man1/xkeycheck.1
 	@chmod 644 $(DESTDIR)$(MANPREFIX)/man1/xkeycheck.1
 
+uninstall:
+	rm -f -- $(DESTDIR)$(PREFIX)/bin/$(OUT)
+	rm -f -- $(DESTDIR)$(MANPREFIX)/man1/xkeycheck.1

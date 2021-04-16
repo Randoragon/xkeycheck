@@ -16,3 +16,7 @@ You only need Xlib installed, which comes by default on most Unix installations.
 Then, run the following (if necessary, as root):
 
     make install
+
+You can uninstall in the same way with
+
+    make uninstall
